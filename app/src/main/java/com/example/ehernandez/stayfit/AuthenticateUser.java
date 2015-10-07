@@ -17,6 +17,24 @@ public class AuthenticateUser extends Activity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // Sleep the activity for 5 seconds
+        Thread timer = new Thread(){
+            public void run(){
+                try{
+                    sleep(500);
+                } catch(Exception e){
+                    e.printStackTrace();
+                } finally {
+                    UserAuthentication();
+                }
+            }
+        };
+
+        timer.start();
+    }
+
+    // Method that autenticate the user and open the activity if it's needed to login or signup
+    public void UserAuthentication(){
         // Determinate wheter the current user is an anonymous user
         if(ParseAnonymousUtils.isLinked(ParseUser.getCurrentUser())){
             //If user is anonymous, send the user to RegisterUser
@@ -28,9 +46,9 @@ public class AuthenticateUser extends Activity{
             ParseUser currentUser = ParseUser.getCurrentUser();
             if(currentUser != null){
                 // Send to the mainActivity
-                /*
-                * Introduce code here
-                * */
+                    /*
+                    * Introduce code here
+                    * */
             } else{
                 //Send to RegisterUser
                 Intent intent = new Intent(this, RegisterUser.class);
@@ -38,6 +56,6 @@ public class AuthenticateUser extends Activity{
                 finish();
             }
         }
-
     }
+    
 }
