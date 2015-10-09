@@ -2,6 +2,7 @@ package com.example.ehernandez.stayfit;
 
 import android.app.Activity;
 import android.app.Application;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -16,6 +17,7 @@ public class AuthenticateUser extends Activity{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.initial_activity);
 
         // Sleep the activity for 5 seconds
         Thread timer = new Thread(){

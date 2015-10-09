@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Parse/Parse.iml" filepath="$PROJECT_DIR$/Parse/Parse.iml" />
-      <module fileurl="file://$PROJECT_DIR$/StayFit2.iml" filepath="$PROJECT_DIR$/StayFit2.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stayfit.iml" filepath="$PROJECT_DIR$/stayfit.iml" />
     </modules>
   </component>
 </project>

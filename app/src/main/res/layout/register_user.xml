@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Username"
-        android:id="@+id/et_username"
+        android:id="@+id/et_username_signup"
         android:layout_gravity="center_horizontal" />
 
     <EditText
@@ -30,7 +30,7 @@
         android:hint="Password"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/et_password"
+        android:id="@+id/et_password_signup"
         android:layout_gravity="center_horizontal" />
 
     <EditText
@@ -48,6 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Join StayFit"
+        android:onClick="checkForJoin"
         android:id="@+id/btn_join"
         android:layout_gravity="center_horizontal" />
 
