@@ -5,6 +5,7 @@ import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.parse.ParseAnonymousUtils;
 import com.parse.ParseUser;
@@ -23,7 +24,7 @@ public class AuthenticateUser extends Activity{
         Thread timer = new Thread(){
             public void run(){
                 try{
-                    sleep(500);
+                    sleep(3000);
                 } catch(Exception e){
                     e.printStackTrace();
                 } finally {
@@ -48,9 +49,9 @@ public class AuthenticateUser extends Activity{
             ParseUser currentUser = ParseUser.getCurrentUser();
             if(currentUser != null){
                 // Send to the mainActivity
-                    /*
-                    * Introduce code here
-                    * */
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+                finish();
             } else{
                 //Send to RegisterUser
                 Intent intent = new Intent(this, RegisterUser.class);

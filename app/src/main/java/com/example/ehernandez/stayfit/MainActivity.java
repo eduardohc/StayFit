@@ -1,12 +1,19 @@
 package com.example.ehernandez.stayfit;
 
 import com.parse.ParseAnalytics;
+import com.parse.ParseUser;
+
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
+
+    Button btn_logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,6 +21,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //ParseAnalytics.trackAppOpenedInBackground(getIntent());
 
+        btn_logout = (Button) findViewById(R.id.btn_logout);
+
+    }
+
+    public void logOut(View view){
+        ParseUser.logOut();
+        Intent intent = new Intent(this, RegisterUser.class);
+        startActivity(intent);
+        finish();
     }
 
     @Override
