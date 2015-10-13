@@ -48,37 +48,43 @@ public class RegisterUser extends Activity {
 
         correct = checkPassword(pass, conf_pass);
 
-        if(userna != null && mail != null && pass != null && conf_pass != null && correct == true){
-            ParseUser user = new ParseUser();
-            user.setUsername(userna);
-            user.setPassword(pass);
-            user.setEmail(mail);
+        if(userna != null && mail != null && pass != null && conf_pass != null){
+            final ParseUser user = new ParseUser();
 
-            user.signUpInBackground(new SignUpCallback() {
-                @Override
-                public void done(ParseException e) {
+            if(correct == true) {
+                user.setUsername(userna);
+                user.setPassword(pass);
+                user.setEmail(mail);
 
-                    try {
-                        Thread.sleep(2000);
+                user.signUpInBackground(new SignUpCallback() {
+                    @Override
+                    public void done(ParseException e) {
 
-                        if (e == null) {
-                            //Show a simple Toast message upon successful registration
-                            Toast.makeText(getApplicationContext(),
-                                    "Successfully Signed up", Toast.LENGTH_LONG).show();
-                            openMainActivity();
-                        } else {
-                            Toast.makeText(getApplicationContext(),
-                                    " " + e, Toast.LENGTH_LONG).show();
+                        try {
+                            Thread.sleep(2000);
+
+                            if (e == null) {
+                                //Show a simple Toast message upon successful registration
+                                Toast.makeText(getApplicationContext(),
+                                        "Successfully Signed up", Toast.LENGTH_LONG).show();
+                                openMainActivity();
+                            } else if(user.isLinked(userna)){
+                                Toast.makeText(getApplicationContext(),
+                                        "The user is already taken ", Toast.LENGTH_LONG).show();
+                            } else if(user.isLinked(mail)){
+                                Toast.makeText(getApplicationContext(),
+                                        "The email is already taken ", Toast.LENGTH_LONG).show();
+                            }
+                        }catch(Exception exception){
+                            e.printStackTrace();
                         }
-                    }catch(Exception exception){
-                        e.printStackTrace();
                     }
-                }
-            });
+                });
+            } else{
+                Toast.makeText(getApplicationContext(),
+                        "Password is different", Toast.LENGTH_LONG).show();
+            }
 
-        } else if(correct != true){
-            Toast.makeText(getApplicationContext(),
-                    "Password is different", Toast.LENGTH_LONG).show();
         } else{
             Toast.makeText(getApplicationContext(),
                     "Fill all the fields", Toast.LENGTH_LONG).show();
