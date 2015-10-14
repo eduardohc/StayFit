@@ -32,6 +32,8 @@
         <activity android:name=".MainActivity"></activity>
 
         <activity android:name=".UserLogin"></activity>
+
+        <activity android:name=".ResetPassword"></activity>
     </application>
 
 </manifest>

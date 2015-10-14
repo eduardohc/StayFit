@@ -1,6 +1,7 @@
 package com.example.ehernandez.stayfit;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -19,9 +20,9 @@ import com.parse.SignUpCallback;
 
 public class RegisterUser extends Activity {
 
+    ProgressDialog progressDialog;
     private EditText username, email, password, confirm_password;
     private Button button;
-    private String userna, mail, pass, conf_pass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,26 +33,30 @@ public class RegisterUser extends Activity {
         email = (EditText) findViewById(R.id.et_email);
         password = (EditText) findViewById(R.id.et_password_signup);
         confirm_password = (EditText) findViewById(R.id.et_confirm_password);
-
     }
 
+    // On click sign up Button
     public void checkForJoin(View view){
-
+        String userna, mail, pass, conf_pass;
         Boolean correct;
 
+        //Get the user, mail and password of the editText
         userna = username.getText().toString();
         mail = email.getText().toString();
         pass = password.getText().toString();
         conf_pass = confirm_password.getText().toString();
 
-        //Toast.makeText(this, "Username: " + user + " Email: " + mail, Toast.LENGTH_LONG).show();
+        // Force user to fill up the form
+        if(userna.equals("") || mail.equals("") || pass.equals("") || conf_pass.equals("")){
+            Toast.makeText(getApplicationContext(),
+                    "Complete all the signup forms", Toast.LENGTH_LONG).show();
 
-        correct = checkPassword(pass, conf_pass);
-
-        if(userna != null && mail != null && pass != null && conf_pass != null){
-            final ParseUser user = new ParseUser();
-
+        } else{
+            // Check if passwords are correct
+            correct = checkPassword(pass, conf_pass);
             if(correct == true) {
+                //Save new user data into Parse.com Data Storage
+                final ParseUser user = new ParseUser();
                 user.setUsername(userna);
                 user.setPassword(pass);
                 user.setEmail(mail);
@@ -59,38 +64,51 @@ public class RegisterUser extends Activity {
                 user.signUpInBackground(new SignUpCallback() {
                     @Override
                     public void done(ParseException e) {
-
                         try {
-                            Thread.sleep(2000);
-
                             if (e == null) {
+                                // Create a progresDialos to display the sign up progress
+                                progressDialog = ProgressDialog.show(RegisterUser.this,
+                                        "Please wait..", "Singing up user..", true);
+                                new Thread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        try{
+                                            // Time that the progressDialog will be displayed
+                                            Thread.sleep(10000);
+                                        } catch (Exception exception){
+                                            exception.printStackTrace();
+                                        }
+                                        progressDialog.dismiss();
+                                    }
+                                }).start();
+
                                 //Show a simple Toast message upon successful registration
                                 Toast.makeText(getApplicationContext(),
-                                        "Successfully Signed up", Toast.LENGTH_LONG).show();
-                                openMainActivity();
-                            } else if(user.isLinked(userna)){
+                                        "Successfully signed up", Toast.LENGTH_SHORT).show();
+                                openMainActivity(); // Open if user is authenticated
+
+                            } else {
+                                //Show a message with the ParseException to know the error
+                                String message;
+                                message = e.getMessage();
                                 Toast.makeText(getApplicationContext(),
-                                        "The user is already taken ", Toast.LENGTH_LONG).show();
-                            } else if(user.isLinked(mail)){
-                                Toast.makeText(getApplicationContext(),
-                                        "The email is already taken ", Toast.LENGTH_LONG).show();
+                                        " " + message, Toast.LENGTH_LONG).show();
                             }
                         }catch(Exception exception){
                             e.printStackTrace();
                         }
                     }
                 });
-            } else{
-                Toast.makeText(getApplicationContext(),
-                        "Password is different", Toast.LENGTH_LONG).show();
-            }
 
-        } else{
-            Toast.makeText(getApplicationContext(),
-                    "Fill all the fields", Toast.LENGTH_LONG).show();
+            } else{
+                // If passwords aren't correct, show a Toast message
+                Toast.makeText(getApplicationContext(),
+                        "Password is different. Please correct it.", Toast.LENGTH_LONG).show();
+            }
         }
     }
 
+    // Verify if the passwords are equals
     public Boolean checkPassword(String passwo, String confPass) {
 
         if (passwo.equals(confPass)) {
@@ -98,7 +116,6 @@ public class RegisterUser extends Activity {
         } else{
             return false;
         }
-
     }
 
     public void openMainActivity(){
@@ -107,9 +124,20 @@ public class RegisterUser extends Activity {
         finish();
     }
 
-    public void UserLogin(View view){
+    public void openLogin(View view){
         Intent intent = new Intent(this, UserLogin.class);
         startActivity(intent);
         finish();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // Destroy the progressDialog when the activity exit
+        if(progressDialog != null){
+            if(progressDialog.isShowing()){
+                progressDialog.cancel();
+            }
+        }
     }
 }

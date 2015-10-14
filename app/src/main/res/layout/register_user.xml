@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:text="Log in"
-            android:onClick="UserLogin"
+            android:onClick="openLogin"
             android:id="@+id/tv_log_in"
             android:layout_gravity="center_horizontal" />
 
