@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/previous"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_arrow_forward_white"
+        android:title="@string/next_button"
+        tools:ignore="AppCompatResource"/>
+</menu>

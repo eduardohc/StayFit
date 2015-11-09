@@ -1,78 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_margin="30dp">
-
+    style="@style/layoutStyleRegister">
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Username"
-        android:id="@+id/et_username_signup"
-        android:layout_gravity="center_horizontal" />
+        style="@style/etStyleRegister.username"
+        android:fontFamily="sans-serif"
+        android:hint="@string/username"
+        android:id="@+id/et_username_signup" />
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:hint="E-mail"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/et_email"
-        android:layout_gravity="center_horizontal" />
+        style="@style/etStyleRegister.email"
+        android:fontFamily="sans-serif"
+        android:id="@+id/et_email" />
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/et_password_signup"
-        android:layout_gravity="center_horizontal" />
+        style="@style/etStyleRegister.password"
+        android:fontFamily="sans-serif"
+        android:id="@+id/et_password_signup"/>
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:hint="Confirm password"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/et_confirm_password"
-        android:layout_gravity="center_horizontal" />
+        style="@style/etStyleRegister.password"
+        android:fontFamily="sans-serif"
+        android:hint="@string/confirm_password"
+        android:id="@+id/et_confirm_password" />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Join StayFit"
+        style="@style/etStyleRegister.btn"
+        android:text="@string/join"
         android:onClick="checkForJoin"
-        android:id="@+id/btn_join"
-        android:layout_gravity="center_horizontal" />
+        android:id="@+id/btn_join"/>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center">
+        style="@style/linearStyleMember">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Already a member?  "
-            android:id="@+id/tv_alredy_member"
-            android:layout_gravity="center_horizontal" />
+            style="@style/tvMember"
+            android:text="@string/member"
+            android:id="@+id/tv_alredy_member"/>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:text="Log in"
+            style="@style/tvMember.status"
+            android:text="@string/login"
             android:onClick="openLogin"
-            android:id="@+id/tv_log_in"
-            android:layout_gravity="center_horizontal" />
+            android:id="@+id/tv_log_in"/>
 
     </LinearLayout>
 

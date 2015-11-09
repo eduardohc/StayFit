@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/personal_information_background">
+
+    <TextView
+        style="@style/textView_topic"
+        android:text="@string/enter_weight"/>
+
+    <LinearLayout
+        style="@style/linearLayout_birthdate">
+
+        <TextView
+            style="@style/textView_information_options"
+            android:textColor="@color/black"
+            android:id="@+id/tv_weight"
+            android:text="@string/weight"/>
+
+        <EditText
+            style="@style/editText.weight_height"
+            android:textCursorDrawable="@null"
+            android:id="@+id/et_weight"/>
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/textView_topic"
+        android:paddingTop="30dp"
+        android:text="@string/enter_goalWeight"/>
+
+    <LinearLayout
+        style="@style/linearLayout_birthdate">
+
+        <TextView
+            style="@style/textView_information_options"
+            android:textColor="@color/black"
+            android:id="@+id/tv_goal_weight"
+            android:text="@string/goal_weight"/>
+
+        <EditText
+            style="@style/editText.weight_height"
+            android:textCursorDrawable="@null"
+            android:id="@+id/et_goalWeight"/>
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/textView_topic"
+        android:paddingTop="30dp"
+        android:text="@string/enter_height"/>
+
+    <LinearLayout
+        style="@style/linearLayout_birthdate">
+
+        <TextView
+            style="@style/textView_information_options"
+            android:textColor="@color/black"
+            android:id="@+id/tv_height"
+            android:text="@string/height"/>
+
+        <EditText
+            style="@style/editText.weight_height"
+            android:textCursorDrawable="@null"
+            android:id="@+id/et_height"/>
+
+    </LinearLayout>
+
+</LinearLayout>

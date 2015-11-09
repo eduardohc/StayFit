@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/personal_information_background">
+
+    <TextView
+        style="@style/textView_topic"
+        android:text="@string/enter_birthdate"/>
+
+    <LinearLayout
+        style="@style/linearLayout_birthdate">
+
+        <TextView
+            style="@style/textView_information_options"
+            android:textColor="@color/black"
+            android:text="@string/birthdate"/>
+
+        <EditText
+            style="@style/editText.birthdate"
+            android:textCursorDrawable="@null"
+            android:id="@+id/et_birthdate"/>
+    </LinearLayout>
+
+</LinearLayout>

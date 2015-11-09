@@ -28,6 +28,7 @@ public class RegisterUser extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_user);
+        setTitle(R.string.signup);
 
         username = (EditText) findViewById(R.id.et_username_signup);
         email = (EditText) findViewById(R.id.et_email);
@@ -49,7 +50,7 @@ public class RegisterUser extends Activity {
         // Force user to fill up the form
         if(userna.equals("") || mail.equals("") || pass.equals("") || conf_pass.equals("")){
             Toast.makeText(getApplicationContext(),
-                    "Complete all the signup forms", Toast.LENGTH_LONG).show();
+                    R.string.message_fillForms, Toast.LENGTH_LONG).show();
 
         } else{
             // Check if passwords are correct
@@ -84,8 +85,9 @@ public class RegisterUser extends Activity {
 
                                 //Show a simple Toast message upon successful registration
                                 Toast.makeText(getApplicationContext(),
-                                        "Successfully signed up", Toast.LENGTH_SHORT).show();
-                                openMainActivity(); // Open if user is authenticated
+                                        R.string.message_succesful_signup,
+                                        Toast.LENGTH_SHORT).show();
+                                openInformationActivities(); // Open if user is authenticated
 
                             } else {
                                 //Show a message with the ParseException to know the error
@@ -118,8 +120,8 @@ public class RegisterUser extends Activity {
         }
     }
 
-    public void openMainActivity(){
-        Intent intent = new Intent(this, MainActivity.class);
+    public void openInformationActivities(){
+        Intent intent = new Intent(this, Gender_Units.class);
         startActivity(intent);
         finish();
     }

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_check_black"
+        android:state_checked="true">
+        <color android:color="@color/skyblue"/>
+    </item>
+
+    <!-- checked -->
+    <item android:drawable="@drawable/ic_check_white"
+        android:state_checked="false">
+        <color android:color="@color/white"/>
+    </item>
+
+    <!-- unchecked -->
+    <item android:drawable="@drawable/ic_check_black"
+        android:state_checked="true">
+        <color android:color="@color/skyblue"/>
+    </item>
+
+    <!-- on focus -->
+    <item android:drawable="@drawable/ic_check_white">
+        <color android:color="@color/white"/>
+    </item>
+
+</selector>

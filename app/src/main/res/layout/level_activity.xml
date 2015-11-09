@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/personal_information_background">
+
+    <TextView
+        style="@style/textView_topic"
+        android:text="@string/select_activity"/>
+
+    <LinearLayout
+        style="@style/linearlayout_adapter.level_activity"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/textView_level_activity"
+            android:text="@string/sedentary"/>
+        <CheckedTextView
+            style="@style/chtvs_personal_information.level_activity"
+            android:text="@string/sedentary_description"
+            android:id="@+id/chtv_sedentary"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/linearlayout_adapter.level_activity"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/textView_level_activity"
+            android:text="@string/low_active"/>
+        <CheckedTextView
+            style="@style/chtvs_personal_information.level_activity"
+            android:text="@string/low_active_description"
+            android:id="@+id/chtv_low_active"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/linearlayout_adapter.level_activity"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/textView_level_activity"
+            android:text="@string/active"/>
+        <CheckedTextView
+            style="@style/chtvs_personal_information.level_activity"
+            android:text="@string/active_description"
+            android:id="@+id/chtv_active"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/linearlayout_adapter.level_activity"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/textView_level_activity"
+            android:text="@string/very_active"/>
+        <CheckedTextView
+            style="@style/chtvs_personal_information.level_activity"
+            android:text="@string/very_active_descrpition"
+            android:id="@+id/chtv_very_active"/>
+
+    </LinearLayout>
+
+</LinearLayout>

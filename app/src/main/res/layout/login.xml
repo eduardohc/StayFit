@@ -1,41 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:background="@color/register_color"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="30dp">
+    android:padding="30dp">
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Username"
-        android:id="@+id/et_username"
-        android:layout_gravity="center_horizontal" />
+        style="@style/etStyleRegister.username"
+        android:fontFamily="sans-serif"
+        android:hint="@string/username"
+        android:id="@+id/et_username"/>
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/et_password"
-        android:layout_gravity="center_horizontal" />
+        style="@style/etStyleRegister.password"
+        android:fontFamily="sans-serif"
+        android:id="@+id/et_password" />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Log in"
+        style="@style/etStyleRegister.btn"
+        android:text="@string/login"
         android:onClick="checkForLogin"
-        android:id="@+id/button"
-        android:layout_gravity="center_horizontal" />
+        android:id="@+id/btn_check_login" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:textStyle="bold"
-        android:text="Forgotten your password?"
+        style="@style/tvMember.status"
+        android:layout_marginTop="25dp"
+        android:text="@string/forgot_password"
         android:onClick="openResetPassword"
-        android:id="@+id/textView"
-        android:layout_gravity="center_horizontal" />
+        android:id="@+id/tv_forgot_password"/>
 </LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/personal_information_background">
+
+    <TextView
+        style="@style/textView_topic"
+        android:text="@string/select_goal"/>
+
+    <CheckedTextView
+        style="@style/chtvs_personal_information"
+        android:text="@string/gain_weight"
+        android:id="@+id/chtv_gain_weight"/>
+
+    <CheckedTextView
+        style="@style/chtvs_personal_information"
+        android:text="@string/slow_weight_gain"
+        android:id="@+id/chtv_slow_weight_gain"/>
+
+    <CheckedTextView
+        style="@style/chtvs_personal_information"
+        android:text="@string/maintain_weight"
+        android:id="@+id/chtv_maintain_weight"/>
+
+    <CheckedTextView
+        style="@style/chtvs_personal_information"
+        android:text="@string/slow_weight_loss"
+        android:id="@+id/chtv_slow_weight_loss"/>
+
+    <CheckedTextView
+        style="@style/chtvs_personal_information"
+        android:text="@string/weight_loss"
+        android:id="@+id/chtv_weight_loss"/>
+
+</LinearLayout>

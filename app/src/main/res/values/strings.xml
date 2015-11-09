@@ -3,4 +3,115 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="gender_toolbar">Gender and measurment units</string>
+
+    <!--
+    String for menu_main
+    -->
+    <string name="logout">Log out</string>
+    <string name="configuration">Configuration</string>
+
+    <!--
+    String for menu navigation Bar
+    -->
+    <string name="back_button">Back</string>
+    <string name="next_button">Next</string>
+
+    <!--
+    String for register activities
+    -->
+    <string name="signup">Register user</string>
+    <string name="login">Log in</string>
+    <string name="reset_password">Reset password</string>
+
+    <string name="username">Username</string>
+    <string name="email">Email address</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="join">Join Stayfit</string>
+    <string name="member">Already a member?  </string>
+    <string name="forgot_password">Forgotten your password?</string>
+
+    <string name="message_fillForms">Complete all the forms.</string>
+    <string name="message_wait">Pleas wait..</string>
+    <string name="message_login">Logging in user.</string>
+    <string name="message_succesful_login">Successfully logged in.</string>
+    <string name="message_succesful_signup">Successfully signed up</string>
+    <string name="message_error">Something was wrong. Correct your user or password.</string>
+    <string name="message_email">Complete the email form.</string>
+    <string name="message_email_sent">An email was successfully sent with reset instructions.</string>
+
+    <!--
+    Strings for gender_units xml file
+    -->
+    <string name="title_gender_units">Gender and units</string>
+    <string name="gender">GENDER</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="units">MEASUREMENT UNITS</string>
+    <string name="pounds">Pounds and Feet/Inches</string>
+    <string name="kilograms">Kilograms and Centimeters</string>
+    <string name="choose_gender_units">Choose gender and units.</string>
+
+    <!--
+    String for weight_height xml layout
+    -->
+    <string name="title_weight_height">Weight and height</string>
+    <string name="enter_weight">ENTER WEIGHT</string>
+    <string name="weight">Current Weight(lb)</string>
+    <string name="weight_kg">Current Weight(kg)</string>
+    <string name="enter_goalWeight">ENTER GOAL WEIGHT</string>
+    <string name="goal_weight">Goal weight(lb)</string>
+    <string name="goal_weight_kg">Goal weight(kg)</string>
+    <string name="enter_height">ENTER HEIGHT</string>
+    <string name="height">Current Height(in)</string>
+    <string name="height_cm">Current Height(cm)</string>
+    <string name="fill_fields_weight_height">Fill all the fields.</string>
+
+    <!--
+    Strings for date_of_birth xml file
+    -->
+    <string name="enter_birthdate">ENTER DATE OF BIRTH</string>
+    <string name="birthdate">Birth date</string>
+    <string name="select_date_birth">SELECT BIRTH DATE</string>
+
+    <!--
+    Strings for level_activity xml file
+    -->
+    <string name="title_level_activity">Level activity</string>
+    <string name="select_activity">SELECT ACTIVITY LEVEL</string>
+    <string name="sedentary">Sedentary</string>
+    <string name="sedentary_description">Daily activities require minimal effort such as resting,
+    desk work or driving.</string>
+    <string name="low_active">Low Active</string>
+    <string name="low_active_description">Daily activities require some effort such as periods of
+    standing, housework or some light exercise.</string>
+    <string name="active">Active</string>
+    <string name="active_description">Daily activities require reasonable effort such as standing,
+    physical work or regular moderate exercise.</string>
+    <string name="very_active">Very Active</string>
+    <string name="very_active_descrpition">Daily activities require intense physical effort such
+        as construction work or regular vigorous exercise.</string>
+    <string name="message_select_level">Select your activity level.</string>
+
+
+    <!--
+    Strings for diet_goals xml file
+    -->
+    <string name="title_diet_goal">Diet goal</string>
+    <string name="select_goal">SELECT GOAL</string>
+    <string name="gain_weight">Weight gain</string>
+    <string name="slow_weight_gain">Slow weight loss</string>
+    <string name="maintain_weight">Maintain current weight</string>
+    <string name="slow_weight_loss">Slow weight loss</string>
+    <string name="weight_loss">Weight loss</string>
+
+    <!--
+    String for menu activity_main xml file
+    -->
+    <string name="open_program">Open program</string>
+    <string name="program">Program</string>
+    <string name="diet">Diet</string>
+    <string name="exercise">Exercise</string>
+
 </resources>

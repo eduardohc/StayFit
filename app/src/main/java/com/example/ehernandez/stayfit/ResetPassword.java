@@ -23,6 +23,7 @@ public class ResetPassword extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.reset_password);
+        setTitle(R.string.reset_password);
 
         et_resetPassword = (EditText) findViewById(R.id.et_email_reset);
     }
@@ -34,7 +35,7 @@ public class ResetPassword extends Activity {
         if(email.equals("")){
             // Toaste a message if the email form has not email
             Toast.makeText(getApplicationContext(),
-                    "Complete the email form.", Toast.LENGTH_SHORT).show();
+                    R.string.message_email, Toast.LENGTH_SHORT).show();
 
         } else{
             // Send a mail to the user who request resetting password
@@ -45,7 +46,7 @@ public class ResetPassword extends Activity {
                         // Toaste a message if the email was successfully sent
                         // and openLogin activity
                         Toast.makeText(getApplicationContext(),
-                                "An email was successfully sent with reset instructions.",
+                                R.string.message_email_sent,
                                 Toast.LENGTH_LONG).show();
                         openLogin();
                     } else{

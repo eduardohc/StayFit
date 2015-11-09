@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    String for menu_main
+    -->
+    <string name="logout">Cerrar sesión</string>
+    <string name="configuration">Configuración</string>
+
+    <!--
+    String for menu navigation Bar
+    -->
+    <string name="back_button">Atras</string>
+    <string name="next_button">Siguiente</string>
+
+    <!--
+    String for register activities
+    -->
+    <string name="signup">Registrar usuario</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="reset_password">Cambiar contraseña</string>
+
+    <string name="username">Usuario</string>
+    <string name="email">E-mail</string>
+    <string name="password">Contraseña</string>
+    <string name="confirm_password">Confirmar contraseña</string>
+    <string name="join">Unirse a StayFit</string>
+    <string name="member">Ya tienes cuenta?  </string>
+    <string name="forgot_password">Olvidaste tu contraseña?</string>
+
+    <string name="message_fillForms">Completa todas las formas.</string>
+    <string name="message_wait">Por favor espere..</string>
+    <string name="message_login">Iniciando sesión...</string>
+    <string name="message_succesful_login">Sesión iniciada con éxito.</string>
+    <string name="message_succesful_signup">Registro de usuario exitoso.</string>
+    <string name="message_error">Corrigue tu usuario o contraseña.</string>
+    <string name="message_email">Completa todas las formas de e-mail.</string>
+    <string name="message_email_sent">Se envió un mail para cambiar contraseña.</string>
+
+    <!--
+    Strings for gender_units xml file
+    -->
+    <string name="title_gender_units">Genero y unidades de medida</string>
+    <string name="gender">GENERO</string>
+    <string name="female">Mujer</string>
+    <string name="male">Hombre</string>
+    <string name="units">UNIDADES DE MEDIDA</string>
+    <string name="pounds">Libras y pulgadas/pies</string>
+    <string name="kilograms">Kilogramos y centimetros</string>
+    <string name="choose_gender_units">Elige genero y unidades de medida.</string>
+
+    <!--
+    String for weight_height xml layout
+    -->
+    <string name="title_weight_height">Peso y estatura</string>
+    <string name="enter_weight">INTRODUZCA PESO</string>
+    <string name="weight">Pero actual(lb)</string>
+    <string name="weight_kg">Peso actual(kg)</string>
+    <string name="enter_goalWeight">INTRODUZCA PESO OBJETIVO</string>
+    <string name="goal_weight">Peso objetivo(lb)</string>
+    <string name="goal_weight_kg">Peso objetivo(kg)</string>
+    <string name="enter_height">INTRODUZCA ESTATURA</string>
+    <string name="height">Estatura actual(pil)</string>
+    <string name="height_cm">Estatura actual(cm)</string>
+    <string name="fill_fields_weight_height">Llena todos los campos.</string>
+
+    <!--
+    Strings for date_of_birth xml file
+    -->
+    <string name="enter_birthdate">INTRODUZCA FECHA DE NACIMIENTO</string>
+    <string name="birthdate">Fecha de nacimiento</string>
+    <string name="select_date_birth">SELECCIONA FECHA DE NACIMIENTO</string>
+
+    <!--
+    Strings for level_activity xml file
+    -->
+    <string name="title_level_activity">Nivel de actividad</string>
+    <string name="select_activity">SELECCIONA NIVEL DE ACTIVIDAD</string>
+    <string name="sedentary">Sedentario</string>
+    <string name="sedentary_description">Actividades diarias que requieren minimo esfuerzo, como
+        descanso, trabajo de oficina o conducion.</string>
+    <string name="low_active">Poca actividad</string>
+    <string name="low_active_description">Actividades diarias que requieren poco esfuerzo, como
+    estar de pie, hacer tareas del hogar o algun ejercicio ligero.</string>
+    <string name="active">Activo</string>
+    <string name="active_description">Actividades diarias que requieren poco esfuerzo, como
+    trabajo fisico o ejercicio moderado regular.</string>
+    <string name="very_active">Muy activo</string>
+    <string name="very_active_descrpition">Actividades diarias que requieren esfuerzo fisico intenso,
+    como obras de construccion o ejercicio vigoroso.</string>
+    <string name="message_select_level">Selecciona tu nivel de actividad.</string>
+
+    <!--
+    Strings for diet_goals xml file
+    -->
+    <string name="title_diet_goal">Objetivo de dieta</string>
+    <string name="select_goal">SELECCIONA OBJETIVO</string>
+    <string name="gain_weight">Ganar peso</string>
+    <string name="slow_weight_gain">Ganar poco peso</string>
+    <string name="maintain_weight">Mantener peso</string>
+    <string name="slow_weight_loss">Perder poco peso</string>
+    <string name="weight_loss">Perder peso</string>
+    <string name="message_select_goal">Selecciona tu objetivo de dieta.</string>
+
+    <!--
+    String for menu activity_main xml file
+    -->
+    <string name="open_program">Abrir programa</string>
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/personal_information_background">
+
+    <TextView
+        style="@style/textView_topic"
+        android:text="@string/gender"/>
+
+    <CheckedTextView
+        style="@style/chtvs_personal_information"
+        android:text="@string/female"
+        android:id="@+id/chtv_female"/>
+
+    <CheckedTextView
+        style="@style/chtvs_personal_information"
+        android:text="@string/male"
+        android:id="@+id/chtv_male"/>
+
+    <TextView
+        style="@style/textView_topic"
+        android:layout_marginTop="30dp"
+        android:text="@string/units"/>
+
+    <CheckedTextView
+        style="@style/chtvs_personal_information"
+        android:text="@string/pounds"
+        android:id="@+id/chtv_pounds_feet"/>
+
+    <CheckedTextView
+        style="@style/chtvs_personal_information"
+        android:text="@string/kilograms"
+        android:id="@+id/chtv_kilograms"/>
+
+</LinearLayout>

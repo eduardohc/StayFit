@@ -5,6 +5,9 @@ import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.parse.ParseAnonymousUtils;
@@ -18,6 +21,12 @@ public class AuthenticateUser extends Activity{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Set fullscreen the window
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.initial_activity);
 
         // Sleep the activity for 5 seconds
@@ -60,5 +69,10 @@ public class AuthenticateUser extends Activity{
             }
         }
     }
-    
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        System.exit(1);
+    }
 }

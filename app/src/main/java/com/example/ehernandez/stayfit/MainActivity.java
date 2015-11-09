@@ -10,10 +10,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
-    Button btn_logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,15 +20,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //ParseAnalytics.trackAppOpenedInBackground(getIntent());
 
-        btn_logout = (Button) findViewById(R.id.btn_logout);
-
     }
 
-    public void logOut(View view){
-        ParseUser.logOut();
-        Intent intent = new Intent(this, RegisterUser.class);
+    public void openProgram(View view){
+        Intent intent = new Intent(this, OpenProgram.class);
         startActivity(intent);
-        finish();
     }
 
     @Override
@@ -44,13 +39,24 @@ public class MainActivity extends AppCompatActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (item.getItemId()){
+            case R.id.configuracion:
+                Toast.makeText(getApplicationContext(),
+                        "Click", Toast.LENGTH_LONG).show();
+                break;
+            case R.id.logout:
+                logOut();
+                break;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    // Logout if click on the menu action bar is clicked,
+    public void logOut(){
+        ParseUser.logOut();
+        Intent intent = new Intent(this, RegisterUser.class);
+        startActivity(intent);
+        finish();
     }
 }

@@ -22,12 +22,13 @@ public class UserLogin extends Activity{
 
     ProgressDialog progressDialog;
     private EditText et_username, et_password;
-    String user, pass;
+    //String user, pass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
+        setTitle(R.string.login);
 
         et_username = (EditText) findViewById(R.id.et_username);
         et_password = (EditText) findViewById(R.id.et_password);
@@ -45,7 +46,7 @@ public class UserLogin extends Activity{
         // Force user to fill login forms
         if(username.equals("") || password.equals("")){
             Toast.makeText(getApplicationContext(),
-                    "Complete all the login forms", Toast.LENGTH_LONG).show();
+                    R.string.message_fillForms, Toast.LENGTH_LONG).show();
 
         } else{
             ParseUser.logInInBackground(username, password, new LogInCallback() {
@@ -70,7 +71,7 @@ public class UserLogin extends Activity{
 
                         // Toast message showing siccessful login
                         Toast.makeText(getApplicationContext(),
-                                "Successfully logged in", Toast.LENGTH_SHORT).show();
+                                R.string.message_succesful_login, Toast.LENGTH_SHORT).show();
                         // If user exist and authenticated, send user to MainActivity.class
                         openMainActivity();
 
@@ -79,8 +80,7 @@ public class UserLogin extends Activity{
                         //String message;
                         //message = e.getMessage();
                         Toast.makeText(getApplicationContext(),
-                                "Something was wrong. Correct your user or password ",
-                                Toast.LENGTH_LONG).show();
+                                R.string.message_error, Toast.LENGTH_LONG).show();
                     }
                 }
             });
